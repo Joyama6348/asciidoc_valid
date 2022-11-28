@@ -30,7 +30,7 @@ jobs:
         id: documents
         uses: Analog-inc/asciidoctor-action@master
         with:
-          shellcommand: "asciidoctor-pdf README.adoc"
+          shellcommand: "asciidoctor-pdf -a scripts=cjk README.adoc"
           
       # Use the iutput from the documents step
       - name: Save AsciiDoc step
