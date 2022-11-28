@@ -30,11 +30,11 @@ jobs:
         id: documents
         uses: Analog-inc/asciidoctor-action@master
         with:
-          shellcommand: "asciidoctor README.adoc"
+          shellcommand: "asciidoctor-pdf README.adoc"
           
       # Use the iutput from the documents step
       - name: Save AsciiDoc step
         uses: actions/upload-artifact@v1
         with:
           name: Output-document
-          path: ./README.html
+          path: ./README.pdf
